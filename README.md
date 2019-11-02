@@ -1,7 +1,7 @@
-MONACO constructs multiple alignment of a set of biological networks
+# MONACO 
         outputAlignment = MONACO (netIdList, inputFolder, idFlag, outFileName, alpha, alignmentConstructionStrategy)
 
-MONACO Input and Output Description
+## MONACO Input and Output Description
         Input   netIdList                       ID list of input networks.
                 inputFolder                     Input folder.
                 idFlag                          This flag is used to expedite the reading process of input files. 
@@ -15,7 +15,7 @@ MONACO Input and Output Description
                                                 2: Maximum Weighted Bipartite Matching (Pairwise network alignment only)
         output  outputAlignment                 Alignment results
 
-Input File Formats
+## Input File Formats
         Suppose we have three PPI networks 'a', 'b', 'c'.
         To run MONACO, the files listed below are required.
 
@@ -39,7 +39,7 @@ Input File Formats
                 * Nodes in the first column must be the nodes of the first network in the file name.
                   Similarly, nodes in the second column have to be the nodes in the second network of the file name.
 
-Output Files format:
+## Output Files format:
         Each line of the output file corresponds to individual cluster
                 Example) 
                         a4 b5 c4
@@ -47,7 +47,7 @@ Output Files format:
                         a2 b3 c2
                         a3 b4 c3
 
-Example:
+## Example:
        alignment = MONACO({'a', 'b', 'c'}, 'test', 1, 'output.txt', 0.4, 1)
 
 For more information on the algorithms, please see:
